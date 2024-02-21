@@ -89,7 +89,7 @@ Define un registro AOR para el endpoint '102'. Este AOR solo permitirá un conta
    [102]
    type=identify
    endpoint=102
-Define una sección 'identify' que se utilizará para correlacion ar las solicitudes entrantes con este endpoint '102'
+Define una sección 'identify' que se utilizará para correlación de las solicitudes entrantes con este endpoint '102'
 
 
 ## Archivos Modificados
