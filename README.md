@@ -33,6 +33,7 @@ Define un nuevo transporte llamado "transport-udp". Esta sección procesará las
   allow=ulaw
   auth=101-auth
   aors=101
+Define un nuevo endpoint (extensión) '101'. Establece el contexto para manejar las llamadas en el dialplan en 'default', se niega a permitir todos los codecs por defecto, luego se permite explícitamente el codec ulaw. La sección de autenticación '101-auth' define las credenciales de autenticación. La sección de 'aors' define el registro de direcciones compatibles para este endpoint.
 
 
 ## Archivos Modificados
