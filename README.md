@@ -6,7 +6,6 @@
 * [Introducción](#introducción)
 * [Pasos de Configuración](#pasos-de-configuración)
 * [Archivos Modificados](#archivos-modificados)
-* [Guías y Ejemplos](#guías-y-ejemplos)
 
 ## Introducción
 Asterisk es una implementación de software de un Private Branch Exchange (PBX). En conjunto con interfaces de hardware de telefonía adecuadas y aplicaciones de red, Asterisk se utiliza para establecer y controlar llamadas telefónicas entre endpoints de telecomunicaciones como sets de teléfono habituales, destinos en la red telefónica pública conmutada (PSTN) y dispositivos o servicios en redes de voz sobre protocolo de Internet (VoIP). Asterisk fue creado en 1999 por Mark Spencer de Digium (ahora una división de Sangoma Technologies Corporation desde 2018) y está diseñado para funcionar en una variedad de sistemas operativos.
@@ -21,7 +20,7 @@ En estas configuraciones están estableciendo dos endpoints SIP '101' y '102', a
    type=transport
    protocol=udp
    bind=0.0.0.0
-Define un nuevo transporte llamado "transport-udp". Esta sección procesará las solicitudes SIP sobre UDP. El parámetro de 'bind' (vincular) es la dirección IP a la que se unirá el transportista. En este caso, "0.0.0.0" significa que el transportista debe escuchar en todas las interfaces de red disponibles.
+Define un nuevo transporte llamado "transport-udp". Esta sección procesará las solicitudes SIP sobre UDP. El parámetro de 'bind' (vincular) es la dirección IP a la que se unirá al protrocolo de transporte. En este caso, "0.0.0.0" significa que el protocolo de transporte debe escuchar en todas las interfaces de red disponibles.
 
 2. Endpoint 101:
    ```bash
@@ -95,14 +94,12 @@ Define una sección 'identify' que se utilizará para correlación de las solici
 Documentos relacionados con los archivos modificados necesarios para la configuración de la centralita.<br>
 <br>
 **Extensions**<br>
-Contiene el "dialplan", que es esencialmente el plan maestro del flujo de control o ejecución en Asterisk. En este archivo, defines las extensiones disponibles y las reglas para el enrutamiento de llamadas. Es aquí donde configuras cómo Asterisk maneja las llamadas entrantes y salientes<br>
+Contiene el "dialplan", que es esencialmente el flujo de control o ejecución en Asterisk. En este archivo, defines las extensiones disponibles (números) y las reglas para el enrutamiento de llamadas. Es aquí donde configuras cómo Asterisk maneja las llamadas entrantes y salientes<br>
 [extensions.conf](Step1/extensions.conf)<br>
 <br>
 **Pjsip**<br>
-incluye secciones que definen la configuración para diversos elementos del Protocolo de Inicio de Sesión (SIP) en Asterisk. Es utilizado para configurar los usuarios SIP, registrar proveedores SIP y definir la forma en que Asterisk maneja las solicitudes SIP. El uso de este archivo es fundamental para la creación y gestión de comunicaciones VoIP (Voz sobre IP) en tu sistema Asterisk
+Contiene secciones que definen la configuración para diversos elementos del Protocolo de Inicio de Sesión (SIP) en Asterisk. Es utilizado para configurar los usuarios SIP, registrar proveedores SIP y definir la forma en que Asterisk maneja las solicitudes SIP. El uso de este archivo es fundamental para la creación y gestión de comunicaciones VoIP (Voz sobre IP) en tu sistema Asterisk
 <br>
 [pjsip.conf](Step1/pjsip.conf)
 
-## Guías y Ejemplos
-Guías detalladas de configuración y ejemplos para facilitar la aplicación precisa de las configuraciones de Asterisk.
 
