@@ -15,6 +15,26 @@ Introducción detallada acerca de la centralita de Asterisk y su importancia.
 ## Pasos de Configuración
 Guía paso a paso para permitir a los usuarios ajustar correctamente su centralita de Asterisk.
 
+#Step 1
+1. Transporte UDP:
+   ```bash
+   [transport-udp]
+   type=transport
+   protocol=udp
+   bind=0.0.0.0
+Define un nuevo transporte llamado "transport-udp". Esta sección procesará las solicitudes SIP sobre UDP. El parámetro de 'bind' (vincular) es la dirección IP a la que se unirá el transportista. En este caso, "0.0.0.0" significa que el transportista debe escuchar en todas las interfaces de red disponibles.
+
+2. Endpoint 101:
+  ```bash
+    [101]
+  type=endpoint
+  context=default
+  disallow=all
+  allow=ulaw
+  auth=101-auth
+  aors=101
+
+
 ## Archivos Modificados
 Documentos relacionados con los archivos modificados necesarios para la configuración de la centralita.
 
