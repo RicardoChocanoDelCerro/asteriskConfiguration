@@ -24,15 +24,15 @@ Guía paso a paso para permitir a los usuarios ajustar correctamente su centrali
    bind=0.0.0.0
 Define un nuevo transporte llamado "transport-udp". Esta sección procesará las solicitudes SIP sobre UDP. El parámetro de 'bind' (vincular) es la dirección IP a la que se unirá el transportista. En este caso, "0.0.0.0" significa que el transportista debe escuchar en todas las interfaces de red disponibles.
 
-2. Endpoint 101:
-  ```bash
-    [101]
-  type=endpoint
-  context=default
-  disallow=all
-  allow=ulaw
-  auth=101-auth
-  aors=101
+1. Transporte UDP:
+   ```bash
+   [101]
+   type=endpoint
+   context=default
+   disallow=all
+   allow=ulaw
+   auth=101-auth
+   aors=101
 Define un nuevo endpoint (extensión) '101'. Establece el contexto para manejar las llamadas en el dialplan en 'default', se niega a permitir todos los codecs por defecto, luego se permite explícitamente el codec ulaw. La sección de autenticación '101-auth' define las credenciales de autenticación. La sección de 'aors' define el registro de direcciones compatibles para este endpoint.
 
 
