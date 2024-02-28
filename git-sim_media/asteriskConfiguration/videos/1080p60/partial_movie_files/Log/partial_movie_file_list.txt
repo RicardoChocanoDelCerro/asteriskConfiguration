@@ -1,0 +1,2 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/ricardochocanodelcerro/Desktop/temp/Study/LRSS/asteriskConfiguration/git-sim_media/asteriskConfiguration/videos/1080p60/partial_movie_files/Log/79756637_3421678860_1968390740.mp4'
